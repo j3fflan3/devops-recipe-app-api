@@ -98,6 +98,25 @@ To run any Terraform command through Docker, use the syntax below:
 docker compose run --rm terraform -chdir=TF_DIR COMMAND
 ```
 
+To initialize
+
+```
+docker compose run --rm terraform -chdir=setup init
+```
+
+To format the tf files
+
+```
+docker compose run --rm terraform -chdir=setup fmt
+```
+
+To validate the files
+
+```
+docker compose run --rm terraform -chdir=setup validate
+```
+
+
 Where `TF_DIR` is the directory containing the Terraform (`setup` or `deploy`) and `COMMAND` is the Terraform command (e.g. `plan`).
 
 #### Get outputs from the setup Terraform
