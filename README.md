@@ -119,7 +119,7 @@ docker compose run --rm terraform -chdir=setup validate
 
 Where `TF_DIR` is the directory containing the Terraform (`setup` or `deploy`) and `COMMAND` is the Terraform command (e.g. `plan`).
 
-#### Get outputs from the setup Terraform
+#### Get outputs from the setup Terraform.  Be sure you are running in a terminal session where aws-vault has been run for authentication, otherwise the AWS_* Env vars will be empty.
 
 ```
 docker compose run --rm terraform -chdir=setup output
