@@ -15,6 +15,7 @@ jobs:
     name: Python
     runs-on: ubuntu-22.04
     permissions:
+      id-token: write # IMPORTANT: this permission is mandatory for trusted publishing.
       contents: read
     steps:
       - name: Login to Docker Hub
