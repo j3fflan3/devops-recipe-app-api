@@ -23,7 +23,7 @@ jobs:
       - name: Print repo
         run: echo $(${{github.repository}})
       - name: Checkout
-        uses: action/checkout@v4
+        uses: actions/checkout@v4
         with:
           repository: ${{ github.repository }}
       - name: Test
